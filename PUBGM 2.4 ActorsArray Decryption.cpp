@@ -72,3 +72,7 @@ namespace Decryption
 		return 0;
 	}
 }
+using  
+auto ActorsPointerAddress = Decryption::DecryptActorsArray(Level, 0x70, 0x334);//--Actors
+DWORD ActorArray = rpm->read<uint32_t>(ActorsPointerAddress);
+DWORD ActorArrayCount = rpm->read<int>(ActorsPointerAddress + 0x4);
